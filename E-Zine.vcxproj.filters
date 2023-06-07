@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{5e704ce8-895c-40f4-93f9-d255bd774748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map">
+      <UniqueIdentifier>{c7e955e9-a8d0-4753-92a3-6368e9a4ffb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Fields">
+      <UniqueIdentifier>{25235704-42f4-4452-9cc5-4aba3a62f083}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="attack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingsState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="selectField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menuState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entityHerd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shopItemRect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hitbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shooting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editMapState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playerInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="backpack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itemSlot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="movement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="creature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="switchField.cpp">
+      <Filter>Source Files\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="slideField.cpp">
+      <Filter>Source Files\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="insertField.cpp">
+      <Filter>Source Files\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="choiceField.cpp">
+      <Filter>Source Files\Fields</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shopItemRect.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="attack.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="selectField.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menuState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entityHerd.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityParameters.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectile.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hitbox.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shooting.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editMapState.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="items.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="movement.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statistics.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerInfo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="backpack.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shop.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="itemSlot.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="creature.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMap.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="switchField.h">
+      <Filter>Source Files\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="slideField.h">
+      <Filter>Source Files\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="insertField.h">
+      <Filter>Source Files\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="choiceField.h">
+      <Filter>Source Files\Fields</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
