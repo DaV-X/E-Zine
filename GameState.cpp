@@ -78,24 +78,24 @@ void GameState::initRender()
 }
 void GameState::initTileMap()
 {
-	this->Map = new TileMap("resources/map.txt",this->stateData->Texture["MAP"]);
+	this->Map = new TileMap("resources/map.txt", this->stateData->Texture["MAP"]);
 }
 void GameState::initPlayer()
 {
-	this->Player = new player(this->stateData->Texture["PLAYER"],sf::Vector2f(1200.f,450.f),this->stateData->Texture["ITEMS"]);
+	this->Player = new player(this->stateData->Texture["PLAYER"], sf::Vector2f(750.f, 550.f), this->stateData->Texture["ITEMS"]);
 }
 void GameState::initPlayerInfo()
 {
-	this->PlayerInfo = new playerInfo(this->stateData->Window->getSize(),*this->stateData->Font, this->Player->getStatsPointer(),this->stateData->Texture["ITEMS"],&this->ShopActive,sf::IntRect(0,0,500,500));
+	this->PlayerInfo = new playerInfo(this->stateData->Window->getSize(), *this->stateData->Font, this->Player->getStatsPointer(), this->stateData->Texture["ITEMS"], &this->ShopActive, sf::IntRect(0, 0, 500, 500));
 }
 void GameState::initShops()
 {
 	int* money = &this->Player->getStatsPointer()->money;
-	this->Shops.push_back(new shop(*this->stateData->Font,"Armors",sf::FloatRect(20*50,8*50,50,50),this->stateData->Window->getSize(),&this->stateData->Items,0,this->PlayerInfo->getBackpackPointer(),money, this->PlayerInfo->getSize()));
-	this->Shops.push_back(new shop(*this->stateData->Font, "Staffs", sf::FloatRect(29 * 50, 8 * 50, 50, 50), this->stateData->Window->getSize(), &this->stateData->Items, 1, this->PlayerInfo->getBackpackPointer(), money,this->PlayerInfo->getSize()));
+	this->Shops.push_back(new shop(*this->stateData->Font, "Armors", sf::FloatRect(20 * 50, 8 * 50, 50, 50), this->stateData->Window->getSize(), &this->stateData->Items, 0, this->PlayerInfo->getBackpackPointer(), money, this->PlayerInfo->getSize()));
+	this->Shops.push_back(new shop(*this->stateData->Font, "Staffs", sf::FloatRect(29 * 50, 8 * 50, 50, 50), this->stateData->Window->getSize(), &this->stateData->Items, 1, this->PlayerInfo->getBackpackPointer(), money, this->PlayerInfo->getSize()));
 	this->Shops.push_back(new shop(*this->stateData->Font, "Hats", sf::FloatRect(20 * 50, 6 * 50, 50, 50), this->stateData->Window->getSize(), &this->stateData->Items, 2, this->PlayerInfo->getBackpackPointer(), money, this->PlayerInfo->getSize()));
 	this->Shops.push_back(new shop(*this->stateData->Font, "Boots", sf::FloatRect(29 * 50, 6 * 50, 50, 50), this->stateData->Window->getSize(), &this->stateData->Items, 3, this->PlayerInfo->getBackpackPointer(), money, this->PlayerInfo->getSize()));
-	this->Shops.push_back(new shop(*this->stateData->Font, "Rings", sf::FloatRect(22 * 50 , 4 * 50, 300, 40), this->stateData->Window->getSize(), &this->stateData->Items, 4, this->PlayerInfo->getBackpackPointer(), money, this->PlayerInfo->getSize()));
+	this->Shops.push_back(new shop(*this->stateData->Font, "Rings", sf::FloatRect(22 * 50, 4 * 50, 300, 40), this->stateData->Window->getSize(), &this->stateData->Items, 4, this->PlayerInfo->getBackpackPointer(), money, this->PlayerInfo->getSize()));
 
 }
 void GameState::initHerd()
@@ -107,7 +107,7 @@ void GameState::initHerd()
 //Render
 void GameState::renderMap(sf::RenderTarget* Target)
 {
-	this->Map->render(*Target,this->Player->getPosition(),this->RenderLimit);
+	this->Map->render(*Target, this->Player->getPosition(), this->RenderLimit);
 }
 void GameState::renderObverseMap(sf::RenderTarget* Target)
 {
@@ -119,13 +119,13 @@ void GameState::renderPlayerInfo(sf::RenderTarget* Target)
 }
 void GameState::renderShops(sf::RenderTarget* Target)
 {
-	for (auto &i : this->Shops) {
+	for (auto& i : this->Shops) {
 		i->render(Target);
 	}
 }
 void GameState::renderEntities(sf::RenderTarget* Target)
 {
-	for (auto &i : this->Entities) {
+	for (auto& i : this->Entities) {
 		i->render(*Target);
 	}
 }
@@ -137,7 +137,7 @@ void GameState::renderPlayer(sf::RenderTarget* Target)
 void GameState::updateInput()
 {
 	//MOVE
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) 
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 		this->Player->move(-1.f, 0.f, this->stateData->dt);
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 		this->Player->move(1.f, 0.f, this->stateData->dt);
@@ -148,18 +148,18 @@ void GameState::updateInput()
 }
 void GameState::updatePlayer()
 {
-	this->Player->update(this->stateData->dt,this->MouseViewPos,this->PlayerInfo->getPointerToStaffSlot(),&this->stateData->ShotsOffset);
+	this->Player->update(this->stateData->dt, this->MouseViewPos, this->PlayerInfo->getPointerToStaffSlot(), &this->stateData->ShotsOffset);
 }
 void GameState::updateView()
 {
 	this->View.setCenter(
-			std::floor(this->Player->getPosition().x+ this->Player->getSize().x/2)+125,
-			std::floor(this->Player->getPosition().y+ this->Player->getSize().y/2)
-		);
+		std::floor(this->Player->getPosition().x + this->Player->getSize().x / 2) + 125,
+		std::floor(this->Player->getPosition().y + this->Player->getSize().y / 2)
+	);
 }
 void GameState::updatePlayerCollision()
 {
-	this->Map->checkCollision(this->Player,this->stateData->dt);
+	this->Map->checkCollision(this->Player, this->stateData->dt);
 }
 void GameState::updateEntityCollision()
 {
@@ -170,10 +170,10 @@ void GameState::updateEntityCollision()
 void GameState::updatePlayerShotCollision()
 {
 	//Check Collision with Tiles
-	this->Map->checkShotsCollision(this->Player->GetProjectilesPointer(),this->stateData->dt);
+	this->Map->checkShotsCollision(this->Player->GetProjectilesPointer(), this->stateData->dt);
 	//Check Collision with Entities
-	for (auto &i:this->Entities) {
-		if (i->checkShotsCollision(this->Player->GetProjectilesPointer(),&this->Player->getStatsPointer()->money)) { break; }
+	for (auto& i : this->Entities) {
+		if (i->checkShotsCollision(this->Player->GetProjectilesPointer(), &this->Player->getStatsPointer()->money)) { break; }
 	}
 }
 void GameState::updateShops()
