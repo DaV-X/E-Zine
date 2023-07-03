@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
-#include "items.h"
+#include "items/items.h"
 
 #include <iostream>
 #include <stack>

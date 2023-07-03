@@ -1,6 +1,6 @@
  #pragma once
-#include "menuState.h"
-#include "editMapState.h"
+#include "states/menuState.h"
+#include "states/editMapState.h"
 
 class engine
 {
