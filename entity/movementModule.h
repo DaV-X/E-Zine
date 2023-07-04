@@ -7,7 +7,7 @@ private:
 	float Acceleration;
 	float Deceleration;
 public:
-	//Constructors and destructors
+	//Constructors
 	movementModule(float MaxSpeed,float Acceleration, float Deceleration);
 	//Main Functions
 	void updatePhysics(float& dt);
